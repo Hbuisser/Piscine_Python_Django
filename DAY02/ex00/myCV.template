@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet"/>
+		<title>CV</title>
+		<style>
+		</style>
+	</head>
+<body>
+	<h1>Bonjour! </h1>
+	<p>Je suis {name}, alias {nickname}, {age} ans, je suis {profession}</p>
+	<h2>Mes experiences :</h2>
+	<ul>
+		<li> Fullstack Developpeur chez TenderBee</li>
+    <li> Analyste finacier chez KBC </li>
+	</ul>
+	<h2>Mes formations</h2>
+	<ol>
+		<li>Etudiant à l'ecole 19</li>
+		<li>Master en Ingenieur de Gestion à la LSM</li>
+	</ol>
+	<h2>Languages appris</h2>
+	<table>
+		<tr>
+			<th>kkk</th>
+			<th>connaissance</th>
+			<th>Projets réalisés</th>
+		</tr>
+		<tr>
+			<td>C</td>
+			<td>8/10</td>
+			<td>{age}</td>
+		</tr>
+		<tr>
+			<td>C++</td>
+			<td>7/10</td>
+			<td style="border-bottom-color: #424242">1</td>
+		</tr>
+		<tr>
+			<td>Python</td>
+			<td style="border-right-color: #424242">6/10</td>
+			<td style="border-color: #424242">2</td>
+		</tr>
+	</table>
+</body>
+</html>
