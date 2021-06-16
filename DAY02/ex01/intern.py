@@ -1,9 +1,9 @@
 
 class Intern:
-    def __init__(self, name="My name? I'm nobody, an intern, I have no name."):
-        self.name = name
+    def __init__(self, Name="My name? I'm nobody, an intern, I have no name."):
+        self.Name = Name
     def __str__(self):
-        return self.name
+        return self.Name
     class Coffee:
         def __str__(self):
             return "This is the worst coffee you ever tasted."

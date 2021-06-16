@@ -19,12 +19,8 @@ class CoffeeMachine:
         if self.nbr >= 10:
             raise self.BrokenMachineException()
         self.nbr += 1
-        x = random.randint(0, 1)
-        if x == 1:
-            hot = hot
-        else:
-            hot = self.EmptyCup()
-        return hot
+        x = random.choice([hot, self.EmptyCup()])
+        return x
     
 if __name__ == '__main__':
     machine = CoffeeMachine()
