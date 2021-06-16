@@ -3,7 +3,7 @@ from elem import Elem
 class Html(Elem):
     def __init__(self, content=None, attr={}):
         Elem.__init__(self, tag="html", attr=attr, content=content, tag_type='double')
-
+        
 class Head(Elem):
     def __init__(self, content=None, attr={}):
         Elem.__init__(self, tag="head", attr=attr, content=content, tag_type='double')

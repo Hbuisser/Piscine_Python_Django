@@ -64,3 +64,21 @@ class Elem:
                 (type(content) == list and all([type(elem) == Text or
                                                 isinstance(elem, Elem)
                                                 for elem in content])))
+
+def test():
+    assert((str(Elem())) == """<div></div>""")
+
+
+if __name__ == '__main__':
+    # elem = Elem(tag="html", tag_type="double")
+    # elem.add_content(Elem(tag="head", content=Elem(tag="title", content='"Hello ground!"')))
+    # body = Elem(tag="body", tag_type="double")
+    # body.add_content(Elem(tag="h1", content='"Oh no, not again!"', tag_type="double"))
+    # body.add_content(Elem(tag="img", tag_type="double", attr={"src": '"http://i.imgur.com/pfp3T.jpg"'}))
+    # elem.add_content(body)
+    # print(elem)
+    try:
+        test()
+        print('Tests succeeded!')
+    except AssertionError as e:
+        print(e)
