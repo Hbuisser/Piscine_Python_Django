@@ -1,4 +1,4 @@
-from elem import Elem
+from elem import Elem, Text
 
 class Html(Elem):
     def __init__(self, content=None, attr={}):
@@ -97,3 +97,8 @@ if __name__ == '__main__':
         print('Tests succeeded!')
     except AssertionError as e:
         print(e)
+    print("Html display : ")
+    html = Elem('html', content = [Elem('head', content = Elem('title', content = Text('\"Hello ground!\"'))),
+        Elem('body', content = [Elem('h1', content = Text("\"Oh no, no again!\"")),
+            Elem('img', {'src': 'http://i.imgur.com/pfp3T.jpg'}, tag_type = 'simple')])])
+    print(html)

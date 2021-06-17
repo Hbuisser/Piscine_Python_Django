@@ -2,7 +2,10 @@
 
 class Text(str):
     def __str__(self):
-        return super().__str__().replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;').replace('\n', '\n<br />\n')
+        new_string = super().__str__().replace('<', '&lt;').replace('>', '&gt;').replace('\n', '\n<br />\n')
+        if new_string == '"':
+            new_string = super().__str__().replace('"', '&quot;')
+        return new_string   
 
 class Elem:
     class ValidationError(Exception):
