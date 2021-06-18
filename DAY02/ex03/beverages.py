@@ -14,6 +14,7 @@ class HotBeverages:
 
 class Coffee(HotBeverages):
     def __init__(self):
+        super().__init__()
         self.name = "coffee"
         self.price = 0.40
     def description(self):
@@ -21,13 +22,12 @@ class Coffee(HotBeverages):
 
 class Tea(HotBeverages):
     def __init__(self):
+        super().__init__()
         self.name = "tea"
-        self.price = 0.50
-    def description(self):
-        return "Just some hot water in a cup."
 
 class Chocolate(HotBeverages):
     def __init__(self):
+        super().__init__()
         self.name = "chocolate"
         self.price = 0.50
     def description(self):
@@ -35,19 +35,8 @@ class Chocolate(HotBeverages):
 
 class Cappuccino(HotBeverages):
     def __init__(self):
+        super().__init__()
         self.name = "cappuccino"
         self.price = 0.45
     def description(self):
         return "Un po' di Italia nella sua tazza!"
-
-# if __name__ == '__main__':
-#     hot = HotBeverages()
-#     print(hot.__str__())
-#     coffee = Coffee()
-#     print(coffee.__str__())
-#     tea = Tea()
-#     print(tea.__str__())
-#     choco = Chocolate()
-#     print(choco.__str__())
-#     capu = Cappuccino()
-#     print(capu.__str__())

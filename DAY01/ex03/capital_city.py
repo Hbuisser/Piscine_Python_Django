@@ -1,26 +1,27 @@
 import sys
 
-def capital(arg):
+def capital():  
     states = {
         "Oregon" : "OR",
         "Alabama" : "AL",
-        "New Jersay" : "NJ",
+        "New Jersey": "NJ",
         "Colorado" : "CO"
     }
     capital_cities = {
-        "OR" : "Salem",
-        "AL" : "Montgomery",
-        "NJ" : "Trenton",
-        "CO" : "Denver"
+        "OR": "Salem",
+        "AL": "Montgomery",
+        "NJ": "Trenton",
+        "CO": "Denver"
     }
     if len(sys.argv) != 2:
-        return;
+        return
+    arg = sys.argv[1]
     x = states.get(arg)
     if (x == None):
         print("Unkown state")
-        return;
+        return
     y = capital_cities.get(x)
     print(y)
 
 if __name__ == '__main__':
-    capital(sys.argv[1])
+    capital()

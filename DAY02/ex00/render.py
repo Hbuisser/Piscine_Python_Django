@@ -11,14 +11,16 @@ def render(arg):
     for i in data:
         i = i.split(" = ")
         v = i[1].rstrip('\n')
-        v = v[1:-1]
+        if v[0] == "\"":
+            v = v[1:-1]
         dico[i[0]] = v
     for key, value in dico.items():
         key = "{" + key + "}"
         text = re.sub(key, value, text)
-    file = open("result.html", "w")
-    file.write(text)
-    file.close()
+    arg = arg.replace("template", "html")
+    new_file = open(arg, "w")
+    new_file.write(text)
+    new_file.close()
 
 
 if __name__ == '__main__':
@@ -34,4 +36,4 @@ if __name__ == '__main__':
     elif not filepath.endswith('.template'):
         print("Wrong file extension")
         sys.exit(1)
-    render(sys.argv[1])
+    render(filepath)

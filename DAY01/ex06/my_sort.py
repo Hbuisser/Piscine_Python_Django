@@ -1,17 +1,5 @@
 
-def my_sort(d):
-    scored = {}
-    for k,v in d.items():
-        if v not in scored:
-            scored[v] = []
-        scored[v].append(k)
-
-    for k in sorted(scored):
-        for v in sorted(scored[k]):
-            print("{}".format(v))
-
-
-if __name__ == '__main__':
+def my_sort():
     d = {
         'Hendrix' : '1942',
         'Allman' : '1946',
@@ -34,4 +22,15 @@ if __name__ == '__main__':
         'Thompson' : '1949',
         'Burton' : '1939',
     }
-    my_sort(d)
+    scored = {}
+    for k,v in d.items():
+        if v not in scored:
+            scored[v] = []
+        scored[v].append(k)
+
+    for k in sorted(scored):
+        for v in sorted(scored[k]):
+            print("{}".format(v))
+
+if __name__ == '__main__':
+    my_sort()

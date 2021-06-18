@@ -1,11 +1,12 @@
 
 def numbers():
     f = open("./numbers.txt", "r")
-    str = f.read()
-    #print(type(str))
-    x = str.split(",")
-    #print(x)
-    for i in x:
+    s = f.read()
+    f.close()
+    s = s.split(",")
+    for i in s:
+        if "\n" in i:
+            i = i[:-1]
         print(i)
 
 if __name__ == '__main__':

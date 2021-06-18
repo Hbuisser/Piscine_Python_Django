@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<link rel="stylesheet"/>
-		<title>CV</title>
+		<title>CV {name}</title>
 		<style>
 		</style>
 	</head>
@@ -20,7 +20,7 @@
 		<li>Etudiant à l'ecole 19</li>
 		<li>Master en Ingenieur de Gestion à la LSM</li>
 	</ol>
-	<h2>Languages appris</h2>
+	<h2>Languages appris a {age} ans</h2>
 	<table>
 		<tr>
 			<th>kkk</th>
@@ -30,7 +30,7 @@
 		<tr>
 			<td>C</td>
 			<td>8/10</td>
-			<td>{age}</td>
+			<td>35</td>
 		</tr>
 		<tr>
 			<td>C++</td>

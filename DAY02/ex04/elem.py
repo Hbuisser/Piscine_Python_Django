@@ -1,8 +1,10 @@
 
-
 class Text(str):
     def __str__(self):
-        return super().__str__().replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;').replace('\n', '\n<br />\n')
+        new_string = super().__str__().replace('<', '&lt;').replace('>', '&gt;').replace('\n', '\n<br />\n')
+        if new_string == '"':
+            new_string = super().__str__().replace('"', '&quot;')
+        return new_string   
 
 class Elem:
     class ValidationError(Exception):
@@ -68,17 +70,14 @@ class Elem:
 def test():
     assert((str(Elem())) == """<div></div>""")
 
-
 if __name__ == '__main__':
-    # elem = Elem(tag="html", tag_type="double")
-    # elem.add_content(Elem(tag="head", content=Elem(tag="title", content='"Hello ground!"')))
-    # body = Elem(tag="body", tag_type="double")
-    # body.add_content(Elem(tag="h1", content='"Oh no, not again!"', tag_type="double"))
-    # body.add_content(Elem(tag="img", tag_type="double", attr={"src": '"http://i.imgur.com/pfp3T.jpg"'}))
-    # elem.add_content(body)
-    # print(elem)
     try:
         test()
         print('Tests succeeded!')
     except AssertionError as e:
         print(e)
+    print("Html display : ")
+    html = Elem('html', content = [Elem('head', content = Elem('title', content = Text('\"Hello ground!\"'))),
+        Elem('body', content = [Elem('h1', content = Text("\"Oh no, no again!\"")),
+            Elem('img', {'src': 'http://i.imgur.com/pfp3T.jpg'}, tag_type = 'simple')])])
+    print(html)
