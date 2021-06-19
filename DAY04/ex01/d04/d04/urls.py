@@ -20,8 +20,13 @@ from django.views.generic import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
 
+from ex01.views import django_view, display_view, templates_view, base
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ex00/', include('ex00.urls')),
-    path('', RedirectView.as_view(url='ex00/')),
+    path('ex01/', base),
+    path('ex01/django', django_view),
+    path('ex01/display', display_view),
+    path('ex01/templates', templates_view),
+    path('', RedirectView.as_view(url='ex01/')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
