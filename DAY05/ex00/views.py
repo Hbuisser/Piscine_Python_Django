@@ -16,19 +16,18 @@ def create_table(request):
             host = "localhost",
             password = "secret"
             )
+        mycursor = conn.cursor()
+        mycursor.execute("""CREATE TABLE IF NOT EXISTS ex00_movies (
+                title varchar(64) NOT NULL,
+                episode_nb int PRIMARY KEY, 
+                opening_crawl text,
+                director varchar(32) NOT NULL,
+                producer varchar(128) NOT NULL,
+                release_date date NOT NULL
+                )""")
+        conn.commit()
+        conn.close()
     except psycopg2.DatabaseError as e:
-        print(f'Error {e}')
-        sys.exit(1)
-    mycursor = conn.cursor()
-    mycursor.execute("""CREATE TABLE IF NOT EXISTS ex00_movies (
-			title varchar(64) NOT NULL,
-			episode_nb int PRIMARY KEY, 
-			opening_crawl text,
-			director varchar(32) NOT NULL,
-			producer varchar(128) NOT NULL,
-			release_date date NOT NULL
-			)""")
-    conn.commit()
-    conn.close()
+        return HttpResponse(e)
     return render(request, 'ex00/index.html')
 

@@ -1,9 +1,6 @@
 from django.db import models
 
 # Create your models here.
-# https://docs.djangoproject.com/fr/3.2/topics/db/models/
-
-# Create your models here.
 class Movies(models.Model):
     # episode_nb: full, PRIMARY KEY.
     episode_nb = models.IntegerField(primary_key=True)

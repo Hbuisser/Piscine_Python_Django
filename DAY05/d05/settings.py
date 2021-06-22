@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'ex00',
     'ex01',
     'ex02',
+    'ex03',
+    'ex04',
+    'ex05'
 ]
 
 MIDDLEWARE = [
@@ -76,23 +79,23 @@ WSGI_APPLICATION = 'd05.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'djangotraining',
-#         'USER': 'djangouser',
-#         'PASSWORD': 'secret',
-#         'HOST': '127.0.0.1',
-#         'PORT': '',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'djangotraining',
+        'USER': 'djangouser',
+        'PASSWORD': 'secret',
+        'HOST': '127.0.0.1',
+        'PORT': '',
+    }
+}
 
 
 # Password validation
