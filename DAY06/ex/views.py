@@ -11,18 +11,21 @@ from django.shortcuts import render, redirect
 
 def home(request):
     form = TipForm(request.POST or None)
-    tip = {}
+    tips = []
     if form.is_valid():
         form = TipForm()
         tip = Tip(author=request.user, content=request.POST.dict().get('content'))
         tip.save()
+        tips = Tip.objects.all()
     if 'name' in request.COOKIES:
         user = request.COOKIES['name']
-        response = render(request, 'base.html', {'usr_name': user, 'form': form, 'tip': tip})
+        tips = Tip.objects.all()
+        response = render(request, 'base.html', {'usr_name': user, 'form': form, 'tip': tips})
     else:
         user = random.choice(settings.USER_NAMES)
         request.COOKIES['name'] = user
-        response = render(request, 'base.html', {'usr_name': user, 'form': form, 'tip': tip})
+        tips = Tip.objects.all()
+        response = render(request, 'base.html', {'usr_name': user, 'form': form, 'tip': tips})
         response.set_cookie('name', user, max_age=settings.COOKIES_TIME)
     return response
 
@@ -45,3 +48,16 @@ def register(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+
+
+# film = []
+#     try:
+#         movies =  Movies.objects.all()
+#         for movie in movies:
+#             film.append((movie.title, movie.episode_nb, movie.opening_crawl, movie.director, movie.producer, movie.release_date ))
+#     except psycopg2.DatabaseError as e:
+#         return HttpResponse(e)
+#     if film == []:
+#         return HttpResponse("No data available")
+#     else:
+#         return render(request, "ex05/display.html", {'film': film})

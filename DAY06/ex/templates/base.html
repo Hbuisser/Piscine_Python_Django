@@ -23,9 +23,19 @@
         {% endif %}
     </nav>
     <form action="" method='POST'> {% csrf_token %}
-        {{ form.as_p }}
+        {% if user.is_authenticated %}
+            {{ form.as_p }}
+        {% endif %}
         <input type="submit" value='save'>
     </form>
+    <div>
+            {% for i in tip %}
+            <br>
+                {{ i.author }}
+                {{ i.content }}
+                {{ i.date }}
+            {% endfor %}
+    </div>
 
     
 </body>
