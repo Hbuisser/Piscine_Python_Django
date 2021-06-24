@@ -25,7 +25,7 @@
 	},
 	{
 	   "model":"article.article",
-	   "pk":4,
+	   "pk":1,
 	   "fields":{
 		  "created":"2021-06-15T23:35:42.000Z",
 		  "title":"Sonic the Hedgehog: 'I'd never seen anything like it in a video game",
@@ -36,7 +36,7 @@
 	},
 	{
 	   "model":"article.article",
-	   "pk":5,
+	   "pk":2,
 	   "fields":{
 		  "created":"2021-06-17T10:19:23.000Z",
 		  "title":"Facebook's VR ads test loses first game after backlash",
@@ -47,7 +47,7 @@
 	},
 	{
 	   "model":"article.article",
-	   "pk":6,
+	   "pk":3,
 	   "fields":{
 		  "created":"2021-06-18T14:48:30.000Z",
 		  "title":"Call of Duty patch brings 'biggest download day on record",
@@ -58,7 +58,7 @@
 	},
 	{
 	   "model":"article.article",
-	   "pk":7,
+	   "pk":4,
 	   "fields":{
 		  "created":"2021-06-21T18:05:15.000Z",
 		  "title":"Fall Guys bought by Fortnite maker Epic Games",
@@ -69,7 +69,7 @@
 	},
 	{
 	   "model":"article.article",
-	   "pk":8,
+	   "pk":5,
 	   "fields":{
 		  "created":"2021-06-22T16:10:06.000Z",
 		  "title":"Google promises to drop personalised ad tracking",
@@ -79,7 +79,7 @@
 	   }
 	},
 	{
-	   "model":"article.userfavoritearticle",
+	   "model":"article.userfavouritearticle",
 	   "pk":1,
 	   "fields":{
 		  "user":1,
@@ -87,7 +87,7 @@
 	   }
 	},
 	{
-		"model":"article.userfavoritearticle",
+		"model":"article.userfavouritearticle",
 		"pk":2,
 		"fields":{
 		   "user":1,
@@ -95,7 +95,15 @@
 		}
 	 },
 	 {
-		"model":"article.userfavoritearticle",
+		"model":"article.userfavouritearticle",
+		"pk":3,
+		"fields":{
+		   "user":1,
+		   "article":7
+		}
+	 },
+	 {
+		"model":"article.userfavouritearticle",
 		"pk":3,
 		"fields":{
 		   "user":1,

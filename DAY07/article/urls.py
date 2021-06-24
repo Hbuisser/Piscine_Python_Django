@@ -2,7 +2,7 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 from django.contrib.auth import logout
 from . import views
-from article.views import ArticleListView, PublicationView, DetailView, FavoritesView
+from article.views import ArticleListView, PublicationView, DetailView, FavouritesView
 from django.views.generic import RedirectView
 
 
@@ -13,7 +13,7 @@ urlpatterns = [
     path('publications/', PublicationView.as_view(), name='publications'),
     path('detail/<slug:pk>/', DetailView.as_view(), name='article-detail'),
     path('logout/', auth_views.LogoutView.as_view(template_name='article/logout.html'), name='logout'),
-    path('favorites/', FavoritesView.as_view(), name='favorites')
+    path('favourites/', FavouritesView.as_view(), name='favourites')
 ]
 
 

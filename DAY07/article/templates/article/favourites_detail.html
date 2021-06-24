@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" type="submit">LOGOUT</a>
+        <br>
+    {% endif %}
+
+    {% for article in object_list %}
+        <br>
+        <td></td><a href="{% url 'article-detail' article.id %}">{{article}}</a></td>
+    {% empty %}
+        <li>No articles yet.</li>
+    {% endfor %}
+</body>
+</html>

@@ -22,13 +22,13 @@
                 <td>{{ article.author }}</td>
                 <td>{{ article.created }}</td>
                 <td>{{ article.synopsis }}</td>
-                <td>{{article}}</td>
+                
                 <td>
                     <a href="{% url 'article-detail' article.pk %}" type="submit">DETAIL</a>
                 </td>
                 <td>
                     <form method="POST">{% csrf_token %}
-                        <button href="{% url 'favorites' %}" type="submit">FAV</button>
+                        <button href="{% url 'favourites' %}" type="submit">FAV</button>
                     </form>
                 </td>
             </tr>
