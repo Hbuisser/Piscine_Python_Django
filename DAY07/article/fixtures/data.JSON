@@ -4,7 +4,7 @@
 	   "pk":1,
 	   "fields":{
 		  "username":"Bob",
-		  "password":"secret"
+		  "password":"pbkdf2_sha256$260000$ZFWy1rtERyvuFu7e2jDCof$NLMwHxuYF+ED+JqiEGcekqt6HsibYKPNm2exz3knTeI="
 	   }
 	},
 	{
@@ -77,5 +77,29 @@
 		  "synopsis":"Google has promised not to develop any new way of tracking individual users for adverts once it phases out its current method.",
 		  "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur, ipsum in venenatis eleifend, enim orci vehicula nunc, ac blandit risus leo id sem. Donec nunc lectus, pellentesque at volutpat a, tristique sit amet leo. Duis maximus iaculis placerat. Vestibulum quis nisl molestie, ultrices odio ut, condimentum orci. Nullam nec volutpat purus. Suspendisse sagittis convallis augue a dictum. Vestibulum nibh magna, elementum id consequat vitae, consectetur nec lectus. Vivamus ut mauris gravida, imperdiet mauris mattis, pharetra turpis."
 	   }
-	}
+	},
+	{
+	   "model":"article.userfavoritearticle",
+	   "pk":1,
+	   "fields":{
+		  "user":1,
+		  "article":8
+	   }
+	},
+	{
+		"model":"article.userfavoritearticle",
+		"pk":2,
+		"fields":{
+		   "user":1,
+		   "article":6
+		}
+	 },
+	 {
+		"model":"article.userfavoritearticle",
+		"pk":3,
+		"fields":{
+		   "user":1,
+		   "article":7
+		}
+	 }
  ]

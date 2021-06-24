@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -5,7 +7,7 @@
 </head>
 <body>
     {% if user.is_authenticated %}
-        
+        <a href="{% url 'logout' %}" type="submit">LOGOUT</a>
     {% endif %}
     <h1>Articles</h1>
 
@@ -20,7 +22,15 @@
                 <td>{{ article.author }}</td>
                 <td>{{ article.created }}</td>
                 <td>{{ article.synopsis }}</td>
-                <td><a href="{% url 'article-detail' article.pk %}">go</a></td>
+                <td>{{article}}</td>
+                <td>
+                    <a href="{% url 'article-detail' article.pk %}" type="submit">DETAIL</a>
+                </td>
+                <td>
+                    <form method="POST">{% csrf_token %}
+                        <button href="{% url 'favorites' %}" type="submit">FAV</button>
+                    </form>
+                </td>
             </tr>
         {% empty %}
             <li>No articles yet.</li>
