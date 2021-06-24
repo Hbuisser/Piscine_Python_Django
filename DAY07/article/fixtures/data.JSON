@@ -1,0 +1,81 @@
+[
+	{
+	   "model":"auth.user",
+	   "pk":1,
+	   "fields":{
+		  "username":"Bob",
+		  "password":"secret"
+	   }
+	},
+	{
+	   "model":"auth.user",
+	   "pk":2,
+	   "fields":{
+		  "username":"Lola",
+		  "password":"secret"
+	   }
+	},
+	{
+	   "model":"auth.user",
+	   "pk":3,
+	   "fields":{
+		  "username":"Rick",
+		  "password":"secret"
+	   }
+	},
+	{
+	   "model":"article.article",
+	   "pk":4,
+	   "fields":{
+		  "created":"2021-06-15T23:35:42.000Z",
+		  "title":"Sonic the Hedgehog: 'I'd never seen anything like it in a video game",
+		  "author":1,
+		  "synopsis":"It's been 30 years since one of gaming's most-loved characters, Sonic the Hedgehog, first raced across our TV screens.",
+		  "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur, ipsum in venenatis eleifend, enim orci vehicula nunc, ac blandit risus leo id sem. Donec nunc lectus, pellentesque at volutpat a, tristique sit amet leo. Duis maximus iaculis placerat. Vestibulum quis nisl molestie, ultrices odio ut, condimentum orci. Nullam nec volutpat purus. Suspendisse sagittis convallis augue a dictum. Vestibulum nibh magna, elementum id consequat vitae, consectetur nec lectus. Vivamus ut mauris gravida, imperdiet mauris mattis, pharetra turpis."
+	   }
+	},
+	{
+	   "model":"article.article",
+	   "pk":5,
+	   "fields":{
+		  "created":"2021-06-17T10:19:23.000Z",
+		  "title":"Facebook's VR ads test loses first game after backlash",
+		  "author":2,
+		  "synopsis":"The first game developer signed up to test Facebook's plan to put adverts into Oculus VR games has reversed course after a backlash from players.",
+		  "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur, ipsum in venenatis eleifend, enim orci vehicula nunc, ac blandit risus leo id sem. Donec nunc lectus, pellentesque at volutpat a, tristique sit amet leo. Duis maximus iaculis placerat. Vestibulum quis nisl molestie, ultrices odio ut, condimentum orci. Nullam nec volutpat purus. Suspendisse sagittis convallis augue a dictum. Vestibulum nibh magna, elementum id consequat vitae, consectetur nec lectus. Vivamus ut mauris gravida, imperdiet mauris mattis, pharetra turpis."
+	   }
+	},
+	{
+	   "model":"article.article",
+	   "pk":6,
+	   "fields":{
+		  "created":"2021-06-18T14:48:30.000Z",
+		  "title":"Call of Duty patch brings 'biggest download day on record",
+		  "author":3,
+		  "synopsis":"Virgin Media says it recorded the 'biggest download day on record' on the same day as the latest Call of Duty update.",
+		  "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur, ipsum in venenatis eleifend, enim orci vehicula nunc, ac blandit risus leo id sem. Donec nunc lectus, pellentesque at volutpat a, tristique sit amet leo. Duis maximus iaculis placerat. Vestibulum quis nisl molestie, ultrices odio ut, condimentum orci. Nullam nec volutpat purus. Suspendisse sagittis convallis augue a dictum. Vestibulum nibh magna, elementum id consequat vitae, consectetur nec lectus. Vivamus ut mauris gravida, imperdiet mauris mattis, pharetra turpis."
+	   }
+	},
+	{
+	   "model":"article.article",
+	   "pk":7,
+	   "fields":{
+		  "created":"2021-06-21T18:05:15.000Z",
+		  "title":"Fall Guys bought by Fortnite maker Epic Games",
+		  "author":1,
+		  "synopsis":"The British video game company behind 2020's smash hit Fall Guys: Ultimate Knockout has been bought by Epic Games.",
+		  "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur, ipsum in venenatis eleifend, enim orci vehicula nunc, ac blandit risus leo id sem. Donec nunc lectus, pellentesque at volutpat a, tristique sit amet leo. Duis maximus iaculis placerat. Vestibulum quis nisl molestie, ultrices odio ut, condimentum orci. Nullam nec volutpat purus. Suspendisse sagittis convallis augue a dictum. Vestibulum nibh magna, elementum id consequat vitae, consectetur nec lectus. Vivamus ut mauris gravida, imperdiet mauris mattis, pharetra turpis."
+	   }
+	},
+	{
+	   "model":"article.article",
+	   "pk":8,
+	   "fields":{
+		  "created":"2021-06-22T16:10:06.000Z",
+		  "title":"Google promises to drop personalised ad tracking",
+		  "author":2,
+		  "synopsis":"Google has promised not to develop any new way of tracking individual users for adverts once it phases out its current method.",
+		  "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur, ipsum in venenatis eleifend, enim orci vehicula nunc, ac blandit risus leo id sem. Donec nunc lectus, pellentesque at volutpat a, tristique sit amet leo. Duis maximus iaculis placerat. Vestibulum quis nisl molestie, ultrices odio ut, condimentum orci. Nullam nec volutpat purus. Suspendisse sagittis convallis augue a dictum. Vestibulum nibh magna, elementum id consequat vitae, consectetur nec lectus. Vivamus ut mauris gravida, imperdiet mauris mattis, pharetra turpis."
+	   }
+	}
+ ]

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title_content %}
+    <title>Ex01: Template engine.</title>
+{% endblock %}
+
+{% block style_content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style2.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <h1>Functioning of Django’s default template engine</h1>
+    <p>Being a web framework, Django needs a convenient way to generate HTML dynamically. The most common approach relies on templates. A template contains the static parts of the desired HTML output as well as some special syntax describing how dynamic content will be inserted. For a hands-on example of creating HTML pages with templates, see Tutorial 3.
+
+        A Django project can be configured with one or several template engines (or even zero if you don’t use templates). Django ships built-in backends for its own template system, creatively called the Django template language (DTL), and for the popular alternative Jinja2. Backends for other template languages may be available from third-parties.
+        
+        Django defines a standard API for loading and rendering templates regardless of the backend. Loading consists of finding the template for a given identifier and preprocessing it, usually compiling it to an in-memory representation. Rendering means interpolating the template with context data and returning the resulting string.</p>
+    
+    <h2> functioning of Blocks :</h2>
+    <p> This is used to define sections in your templates, so that if another template extends this one, it'll be able to replace whatever html code has been written inside of it. Blocks are identified by their name. </p>
+    <h2> functioning of Loopsfor ... in :</h2>
+    <p>for tag loops over each item in an array, making the item available in a context variable.</p>
+    <h2> functioning of if control structures :</h2>
+    <p>The -if-  tag evaluates a variable, and if that variable is “true” (i.e. exists, is not empty, and is not a false boolean value) the contents of the block are output.</p>
+    <p>cfr : https://www.geeksforgeeks.org/if-django-template-tags/</p>
+    <h2> functioning of The display of the passing context variables :</h2>
+    <p>When the template engine encounters a variable, it evaluates that variable and replaces it with the result. Variable names consist of any combination of alphanumeric characters and the underscore ("_") but may not start with an underscore, and may not be a number. The dot (".") also appears in variable sections, although that has a special meaning, as indicated below. Importantly, you cannot have spaces or punctuation characters in variable names.</p>
+{% endblock %}
