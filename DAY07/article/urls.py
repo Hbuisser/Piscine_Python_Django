@@ -12,8 +12,11 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='article/contact.html', redirect_authenticated_user = True), name='contact'),
     path('publications/', PublicationView.as_view(), name='publications'),
     # path('detail/', DetailView.as_view(), name='detail'),
-    path('detail/<int:id>/', DetailView.as_view(), name='article-detail'),
-    # path('logout/', auth_views.LogoutView.as_view(template_name='article/contact.html', redirect_authenticated_user = True), name='logout')
+    path('detail/<slug:pk>/', DetailView.as_view(), name='article-detail'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    # path('favorites/', auth_views.FavoritesView.as_view(), name='favorite')
+    
+    
     # path('articles', auth_views.LoginView.as_view(template_name='home.html'), name='home'),
     # path('register/', views.register, name='register'),
     # path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
