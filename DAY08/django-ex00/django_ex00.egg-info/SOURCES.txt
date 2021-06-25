@@ -15,6 +15,11 @@ ex00/models.py
 ex00/tests.py
 ex00/urls.py
 ex00/views.py
+ex00/img/Screen_Shot_2021-06-25_at_9.48.24_AM.png
+ex00/img/Screen_Shot_2021-06-25_at_9.48.24_AM_MtbtAFB.png
+ex00/img/Screen_Shot_2021-06-25_at_9.48.24_AM_QFVDgpY.png
+ex00/img/Screen_Shot_2021-06-25_at_9.48.24_AM_kmuvpk4.png
 ex00/migrations/0001_initial.py
 ex00/migrations/__init__.py
+ex00/static/segfault.jpg
 ex00/templates/index.html
